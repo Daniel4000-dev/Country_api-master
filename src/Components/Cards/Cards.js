@@ -10,14 +10,14 @@ function Cards() {
     <div className='container grid grid-cols-4 gap-16 mx-auto'>
       { countries.map( ( country, index ) => <Link to={{ pathname: 'details', state: country}} key={index}>
           <ThumbDetail
-            title={country.name}
-            image_url={country.flag}
+            title={country.name.common}
+            image_url={country.flags}
             population={country.population}
             region={country.region}
             capital={country.capital}
           />
       </Link> )}
-        <h4 class="px-20 py-20">hello world</h4>
+        <h4 className="px-20 py-20">hello world</h4>
     </div>
   )
 }
